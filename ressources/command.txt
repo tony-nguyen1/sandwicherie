@@ -1,0 +1,2 @@
+find . -not -path './.git/*' | git check-ignore --stdin
+git status --ignored
