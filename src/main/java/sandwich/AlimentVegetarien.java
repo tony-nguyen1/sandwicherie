@@ -1,5 +1,10 @@
+package main.java.sandwich;
 
 import java.util.*;
+
+import NomAliment.NomAlimentVegetarien;
+import main.java.inter.IGarniture;
+import main.java.inter.estVegetarien;
 
 /**
  * 
@@ -7,16 +12,15 @@ import java.util.*;
 public class AlimentVegetarien extends Aliment implements estVegetarien, IGarniture {
 
     /**
-     * Default constructor
-     */
-    public AlimentVegetarien() {
-    }
-
-    /**
      * @param n
      */
-    public void AlimentVegetarien(NomAlimentVegetarien n) {
-        // TODO implement here
+    public AlimentVegetarien(NomAlimentVegetarien n) {
+    	throw new UnsupportedOperationException("Not implemented yet");
     }
+
+	@Override
+	public void setKilocalories(float f) {
+		throw new UnsupportedOperationException("Not implemented yet");
+	}
 
 }

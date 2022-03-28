@@ -1,20 +1,15 @@
 package main.java.sandwich;
 
-import java.util.*;
+import NomAliment.NomSauce;
+import main.java.inter.ISauce;
 
-import NomAliment.NomPain;
-import main.java.inter.IPain;
+public class Sauce extends Aliment implements ISauce {
 
-/**
- * 
- */
-public class Pain extends Aliment implements IPain {
-
-    /**
+	/**
      * @param n 
      * @return
      */
-    public Pain(NomPain n) {
+    public Sauce(NomSauce n) {
     	throw new UnsupportedOperationException("Not implemented yet");
     }
 

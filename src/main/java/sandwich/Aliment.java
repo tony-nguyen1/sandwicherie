@@ -1,5 +1,10 @@
+package main.java.sandwich;
 
 import java.util.*;
+
+import main.java.inter.IAliment;
+
+import java.lang.UnsupportedOperationException;
 
 /**
  * 
@@ -7,27 +12,35 @@ import java.util.*;
 public abstract class Aliment implements IAliment {
 
     /**
-     * Default constructor
-     */
-    public Aliment() {
-    }
-
-    /**
      * 
      */
     private String nom;
+    
+    /**
+     * 
+     */
+    private int quantite;
 
     /**
      * 
      */
     public void getNom() {
-        // TODO implement here
+    	throw new UnsupportedOperationException("Not implemented yet");
     }
 
+    /**
+     * 
+     */
+    public void getQte() {
+    	throw new UnsupportedOperationException("Not implemented yet");
+    }
+    
     /**
      * @param float f 
      * @return
      */
-    public abstract void setKilocalories(void float f);
-
+    public void setKilocalories(float f) {
+    	throw new UnsupportedOperationException("Not implemented yet");
+    }
+    	
 }

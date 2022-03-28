@@ -1,5 +1,9 @@
+package main.java.sandwich;
 
 import java.util.*;
+
+import NomAliment.NomAlimentVegan;
+import main.java.inter.estVegan;
 
 /**
  * 
@@ -7,16 +11,11 @@ import java.util.*;
 public class AlimentVegan extends AlimentVegetarien implements estVegan {
 
     /**
-     * Default constructor
-     */
-    public AlimentVegan() {
-    }
-
-    /**
      * @param NomAlimentVegan
      */
-    public void AlimentVegan(void NomAlimentVegan) {
-        // TODO implement here
+    public AlimentVegan(NomAlimentVegan n) {
+    	super(null);
+    	throw new UnsupportedOperationException("Not implemented yet");
     }
 
 }
