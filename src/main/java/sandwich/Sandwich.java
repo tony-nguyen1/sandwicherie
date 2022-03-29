@@ -9,15 +9,14 @@ import main.java.inter.ISauce;
 /***
  *  TODO
  *  
- *  getIngredientMostCalorique avec Iterable
- *  getIngredientMostCalorique avec stream
+ *  Application.java main()
  */
 
 
 /**
  * 
  */
-public class Sandwich <P extends IPain, S extends ISauce, G extends IGarniture> {
+public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture> implements Iterable<Aliment>{
 	
 	private P monPain;
 	private S maSauce;
@@ -34,22 +33,105 @@ public class Sandwich <P extends IPain, S extends ISauce, G extends IGarniture> 
     }
     
     public void ajouterIngredient(G unIngredient) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	garniture.addLast(unIngredient);
     }
 
     public void ajouterIngredient(G unIngredient, int i) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	garniture.add(i, unIngredient);
     }
     
-    public void deplacerIngredient(Sandwich s, G uneGarniture, int qte) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    /**
+     * Déplace un ingrédient depuis this.garniture vers un autre sandwich s 
+     * 
+     * @param s
+     * @param uneGarniture déjà dans this.garniture
+     */
+    public void deplacerIngredient(Sandwich<P, S, G> s, G uneGarniture) {
+    	this.garniture.removeLastOccurrence(uneGarniture);
+    	s.ajouterIngredient(uneGarniture);
+    	
     }
+    
+    
     
     public G getNthGarniture(int i) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	return garniture.get(i);
     }
     
+    
+    
+    
     public Aliment getIngredientMostCalorique() {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	float caloriePain = monPain.getKilocalories();
+    	float calorieSauce = maSauce.getKilocalories();
+    	
+    	float max = -1f;
+    	G maxGarniture= null;
+    	
+    	for (G garniture : this.garniture) {
+    		
+    		if ( max < garniture.getKilocalories() ) {
+    			max = garniture.getKilocalories();
+    			maxGarniture = garniture;
+    		}
+    	}
+    	
+    	Aliment maxAliment;
+    	
+    	if (maxGarniture.getKilocalories() < caloriePain) maxAliment = this.monPain;
+    	else maxAliment = maxGarniture;
+    	
+    	if (maxAliment.getKilocalories() < calorieSauce) maxAliment = maSauce;
+    	
+    	
+    	return maxAliment;    	
+
+    	
     }
+    
+    
+    public Aliment getIngredientMostCaloriqueIter() {
+    	Aliment maxAliment = monPain;
+    	for (Aliment aliment : this) {
+    		
+    		if (aliment.getKilocalories() > maxAliment.getKilocalories()) {
+    			maxAliment = aliment;
+    		}
+    		
+    	}
+    	
+    	return maxAliment;
+    }
+    
+    public Aliment getIngredientMostCaloriqueStream() {
+    	LinkedList<Aliment> foo = new LinkedList<Aliment>(this.garniture);
+    	foo.addFirst(maSauce);
+    	foo.addFirst(monPain);
+    	
+    	double max = foo.stream().mapToDouble(Aliment::getKilocalories).max().getAsDouble();
+    	
+    	return foo.stream().max(new SandwichComparator()).get();
+    }
+    
+
+	@Override
+	public SandwichIterator iterator() {
+		// TODO Auto-generated method stub
+		return new SandwichIterator(this);
+	}
+	
+	public Iterator<G> getGanitureIterator() {
+		return this.garniture.iterator();
+	}
+
+	
+	public P getPain() {
+		return monPain;
+	}
+
+	public S getSauce() {
+		return maSauce;
+	}
 }
+
+

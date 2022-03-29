@@ -2,6 +2,8 @@ package main.java.inter;
 
 import java.util.*;
 
+import main.java.customException.OutOfRangeKilocariesException;
+
 /**
  * 
  */
@@ -16,6 +18,8 @@ public interface IAliment {
      * @param float f 
      * @return
      */
-    public abstract void setKilocalories(float f);
+    public abstract void setKilocalories(float f) throws OutOfRangeKilocariesException;
+    
+    public abstract float getKilocalories();
 
 }

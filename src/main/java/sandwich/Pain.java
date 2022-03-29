@@ -3,6 +3,7 @@ package main.java.sandwich;
 import java.util.*;
 
 import NomAliment.NomPain;
+import main.java.customException.OutOfRangeKilocariesException;
 import main.java.inter.IPain;
 
 /**
@@ -18,20 +19,12 @@ public class Pain extends Aliment implements IPain {
      * @param n 
      * @return
      */
-	
-	
-    public Pain(NomPain n) {
-    	
-    	this.nom = n.toString();
-    	this.quantite = 1;
+    public Pain(NomPain n, float f) throws OutOfRangeKilocariesException {
+    	super(n.toString(), f);
     }
     
-    
-    
-    public Pain(NomPain n, int quantite) {
-    	
-    	this(n);
-    	this.quantite = quantite;
+    protected Pain(String s, float f) throws OutOfRangeKilocariesException {
+    	super(s, f);
     }
     
     

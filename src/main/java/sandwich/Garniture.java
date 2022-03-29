@@ -2,7 +2,10 @@ package main.java.sandwich;
 
 import java.util.*;
 
+import NomAliment.NomAlimentVegan;
+import NomAliment.NomAlimentVegetarien;
 import NomAliment.NomGarniture;
+import main.java.customException.OutOfRangeKilocariesException;
 import main.java.inter.IGarniture;
 
 /**
@@ -12,9 +15,26 @@ public class Garniture extends Aliment implements IGarniture {
 
     /**
      * @param n
+     * @param f
      */
-    public Garniture(NomGarniture n) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    public Garniture(NomGarniture n, float f) throws OutOfRangeKilocariesException {
+    	super(n.toString(), f);
+    }
+    
+    /**
+     * @param n
+     * @param f
+     */
+    public Garniture(NomAlimentVegan n, float f) throws OutOfRangeKilocariesException {
+    	super(n.toString(), f);
+    }
+    
+    /**
+     * @param n
+     * @param f
+     */
+    public Garniture(NomAlimentVegetarien n, float f) throws OutOfRangeKilocariesException {
+    	super(n.toString(), f);
     }
 
 	
