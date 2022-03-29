@@ -18,9 +18,5 @@ public class AlimentVegetarien extends Aliment implements estVegetarien, IGarnit
     	throw new UnsupportedOperationException("Not implemented yet");
     }
 
-	@Override
-	public void setKilocalories(float f) {
-		throw new UnsupportedOperationException("Not implemented yet");
-	}
-
+	
 }

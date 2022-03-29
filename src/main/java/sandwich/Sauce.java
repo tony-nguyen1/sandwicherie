@@ -13,9 +13,5 @@ public class Sauce extends Aliment implements ISauce {
     	throw new UnsupportedOperationException("Not implemented yet");
     }
 
-	@Override
-	public void setKilocalories(float f) {
-		throw new UnsupportedOperationException("Not implemented yet");
-	}
-
+	
 }

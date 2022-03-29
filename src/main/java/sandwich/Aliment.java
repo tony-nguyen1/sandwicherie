@@ -14,12 +14,13 @@ public abstract class Aliment implements IAliment {
     /**
      * 
      */
-    private String nom;
+    protected String nom;
+    protected float kiloCalories;
+    protected int quantite;
     
-    /**
-     * 
-     */
-    private int quantite;
+    
+    
+    
 
     /**
      * 
@@ -40,7 +41,7 @@ public abstract class Aliment implements IAliment {
      * @return
      */
     public void setKilocalories(float f) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	this.kiloCalories = f;
     }
     	
 }

@@ -17,9 +17,5 @@ public class Garniture extends Aliment implements IGarniture {
     	throw new UnsupportedOperationException("Not implemented yet");
     }
 
-	@Override
-	public void setKilocalories(float f) {
-		throw new UnsupportedOperationException("Not implemented yet");		
-	}
-
+	
 }

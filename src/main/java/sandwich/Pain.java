@@ -9,18 +9,32 @@ import main.java.inter.IPain;
  * 
  */
 public class Pain extends Aliment implements IPain {
-
+	
+	
+	
+	
+	
     /**
      * @param n 
      * @return
      */
+	
+	
     public Pain(NomPain n) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	
+    	this.nom = n.toString();
+    	this.quantite = 1;
     }
+    
+    
+    
+    public Pain(NomPain n, int quantite) {
+    	
+    	this(n);
+    	this.quantite = quantite;
+    }
+    
+    
 
-	@Override
-	public void setKilocalories(float f) {
-		throw new UnsupportedOperationException("Not implemented yet");
-	}
-
+	
 }

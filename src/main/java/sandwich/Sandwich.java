@@ -22,12 +22,15 @@ public class Sandwich <P extends IPain, S extends ISauce, G extends IGarniture> 
 	private P monPain;
 	private S maSauce;
 	private LinkedList<G> garniture;
+	// on construit le sandwich du bas vers le haut (le premier élément de la liste est donc la gartinure la plus "basse" du sandwich)
 
     /**
      * Default constructor
      */
     public Sandwich(P unPain, S uneSauce) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	monPain = unPain;
+    	maSauce = uneSauce;
+    	garniture = new LinkedList<G>();
     }
     
     public void ajouterIngredient(G unIngredient) {
