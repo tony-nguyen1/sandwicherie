@@ -56,5 +56,10 @@ public abstract class Aliment implements IAliment {
     public float getKilocalories() {
     	return this.kiloCalories;
     }
+
+    @Override
+    public String toString() {
+      return String.format("Aliment:(%s->%f)", nom, getKilocalories());
+    }
     	
 }
