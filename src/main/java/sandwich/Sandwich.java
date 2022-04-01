@@ -10,6 +10,7 @@ import main.java.inter.ISauce;
  *  TODO
  *  
  *  Application.java main()
+ *  -> Déplacer des ingrédients entre sandwichs
  */
 
 
@@ -32,7 +33,28 @@ public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture> imp
     	garniture = new LinkedList<G>();
     }
     
-    public void ajouterIngredient(G unIngredient) {
+    
+    
+    @Override
+	public String toString() {
+    	StringBuilder sb = new StringBuilder("Sandwich [monPain=");
+    	sb.append(monPain);
+    	sb.append(", maSauce=");
+    	sb.append(maSauce);
+    	sb.append(", garniture=");
+    	
+    	for ( Garniture g : garniture) {
+    		sb.append(g);
+    	}
+    	
+    	sb.append("]");
+    	
+		return sb.toString();
+	}
+
+
+
+	public void ajouterIngredient(G unIngredient) {
     	garniture.addLast(unIngredient);
     }
 
@@ -46,9 +68,9 @@ public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture> imp
      * @param s
      * @param uneGarniture déjà dans this.garniture
      */
-    public void deplacerIngredient(Sandwich<P, S, G> s, G uneGarniture) {
-    	this.garniture.removeLastOccurrence(uneGarniture);
-    	s.ajouterIngredient(uneGarniture);
+    public void deplacerIngredient(Sandwich<? extends P, ?, ? extends G> s, G uneGarniture) {
+//    	this.garniture.removeLastOccurrence(uneGarniture);
+//    	s.ajouterIngredient(uneGarniture);
     	
     }
     

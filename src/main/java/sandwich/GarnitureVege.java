@@ -6,9 +6,17 @@ import main.java.nomAliment.NomAlimentVegetarien;
 
 public class GarnitureVege extends Garniture implements estVegetarien {
 
+	
+	protected GarnitureVege(String s, float f) throws OutOfRangeKilocariesException {
+		super(s,f);
+	}
+	
+	
 	public GarnitureVege(NomAlimentVegetarien n, float f) throws OutOfRangeKilocariesException {
-		super(n, f);
+		this(n.toString(), f);
 		// TODO Auto-generated constructor stub
 	}
+
+	
 
 }

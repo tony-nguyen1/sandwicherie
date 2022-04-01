@@ -11,32 +11,37 @@ import main.java.nomAliment.*;
 public class Application {
 
 	public static void main(String[] args) throws OutOfRangeKilocariesException {
-		ArrayList<Sandwich<?,?,?>> listSandwich = new ArrayList<>();
+		ArrayList<Sandwich<? extends Pain, Sauce, ? extends Garniture>> listSandwich = new ArrayList<>();
 		Sandwich<Pain, Sauce, Garniture> sandwichNormal;
 		Sandwich<PainVege, Sauce, GarnitureVege> sandwichVege;
-		Sandwich sandwichVegan;
+		Sandwich<PainVegan, Sauce, GarnitureVegan> sandwichVegan;
 		
 		
 		//(1) création de sandwich
 		sandwichNormal = new Sandwich<>(new Pain(NomPain.PainComplet, 50f), new Sauce(NomSauce.Algerienne, 28f));
 		listSandwich.add(sandwichNormal);
 		sandwichNormal.ajouterIngredient(new Garniture(NomGarniture.Jambon, 88.88f));
+		System.out.println(sandwichNormal);
 
 		sandwichVege = new Sandwich<>(new PainVege(NomPain.PainComplet, 50f), new Sauce(NomSauce.Algerienne, 28f));
 		listSandwich.add(sandwichVege);
 		sandwichVege.ajouterIngredient(new GarnitureVege(NomAlimentVegetarien.Oeuf, 34f));
+		System.out.println(sandwichNormal);
 
 		
 		//(2) l'ingrédient le plus calorique
 		for (int i = 0; i < listSandwich.size(); i++)
 		{
-			Sandwich s = listSandwich.get(i);
+		 	Sandwich<? extends Pain, Sauce, ? extends Garniture> s = listSandwich.get(i);
 			
 			System.out.print("L'ingrédient le plus calorique du sandwich n°" + i + " : ");
 			System.out.println(s.getIngredientMostCalorique());
 		}
 		
 		//(3) le déplacement d’un ingrédient du sandwich végan vers le sandwich végétarien
+		Garniture ga;
+		ga = sandwichVege.getNthGarniture(0);
+		sandwichNormal.deplacerIngredient(sandwichVege, ga);
 		
 		
 		//(4) ingrédients en commun ?

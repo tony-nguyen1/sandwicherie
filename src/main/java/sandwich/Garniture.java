@@ -10,13 +10,18 @@ import main.java.inter.IGarniture;
  * 
  */
 public class Garniture extends Aliment implements IGarniture {
+	
+	
+	public Garniture(String s, float f) throws OutOfRangeKilocariesException {
+		super(s,f);
+	}
 
     /**
      * @param n
      * @param f
      */
     public Garniture(NomGarniture n, float f) throws OutOfRangeKilocariesException {
-    	super(n.toString(), f);
+    	this(n.toString(), f);
     }
     
     /**
@@ -24,15 +29,15 @@ public class Garniture extends Aliment implements IGarniture {
      * @param f
      */
     public Garniture(NomAlimentVegan n, float f) throws OutOfRangeKilocariesException {
-    	super(n.toString(), f);
+    	this(n.toString(), f);
     }
     
     /**
      * @param n
      * @param f
      */
-    public Garniture(NomAlimentVegetarien n, float f) throws OutOfRangeKilocariesException {
-    	super(n.toString(), f);
+    protected Garniture(NomAlimentVegetarien n, float f) throws OutOfRangeKilocariesException {
+    	this(n.toString(), f);
     }
 
 	
