@@ -2,12 +2,7 @@ package main.java.app;
 
 import java.util.ArrayList;
 
-import main.java.sandwich.Garniture;
-import main.java.sandwich.Pain;
-import main.java.sandwich.Sandwich;
-import main.java.sandwich.Sauce;
-import main.java.sandwich.AlimentVegetarien;
-import main.java.sandwich.PainVegetarien;
+import main.java.sandwich.*;
 
 import main.java.customException.OutOfRangeKilocariesException;
 
@@ -18,18 +13,18 @@ public class Application {
 	public static void main(String[] args) throws OutOfRangeKilocariesException {
 		ArrayList<Sandwich<?,?,?>> listSandwich = new ArrayList<>();
 		Sandwich<Pain, Sauce, Garniture> sandwichNormal;
-		// Sandwich<PainVegetarien, Sauce, AlimentVegetarien> sandwichVege;
+		Sandwich<PainVege, Sauce, GarnitureVege> sandwichVege;
 		Sandwich sandwichVegan;
 		
 		
 		//(1) création de sandwich
-		sandwichNormal = new Sandwich(new Pain(NomPain.PainComplet, 100f), new Sauce(NomSauce.Algerienne, 28f));
+		sandwichNormal = new Sandwich<>(new Pain(NomPain.PainComplet, 50f), new Sauce(NomSauce.Algerienne, 28f));
 		listSandwich.add(sandwichNormal);
 		sandwichNormal.ajouterIngredient(new Garniture(NomGarniture.Jambon, 88.88f));
 
-		// sandwichVege = new Sandwich(new Pain(NomPain.PainComplet, 100f), new Sauce(NomSauce.Algerienne, 28f));
-		// listSandwich.add(sandwichVege);
-
+		sandwichVege = new Sandwich<>(new PainVege(NomPain.PainComplet, 50f), new Sauce(NomSauce.Algerienne, 28f));
+		listSandwich.add(sandwichVege);
+		sandwichVege.ajouterIngredient(new GarnitureVege(NomAlimentVegetarien.Oeuf, 34f));
 
 		
 		//(2) l'ingrédient le plus calorique
