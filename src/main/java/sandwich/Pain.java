@@ -2,7 +2,7 @@ package main.java.sandwich;
 
 import java.util.*;
 
-import NomAliment.NomPain;
+import main.java.nomAliment.*;
 import main.java.customException.OutOfRangeKilocariesException;
 import main.java.inter.IPain;
 

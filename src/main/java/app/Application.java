@@ -11,8 +11,7 @@ import main.java.sandwich.PainVegetarien;
 
 import main.java.customException.OutOfRangeKilocariesException;
 
-import NomAliment.NomPain;
-import NomAliment.*;
+import main.java.nomAliment.*;
 
 public class Application {
 

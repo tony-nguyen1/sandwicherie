@@ -1,10 +1,6 @@
 package main.java.app;
 
-import NomAliment.NomAlimentVegan;
-import NomAliment.NomAlimentVegetarien;
-import NomAliment.NomGarniture;
-import NomAliment.NomPain;
-import NomAliment.NomSauce;
+import main.java.nomAliment.*;
 import main.java.sandwich.Garniture;
 import main.java.sandwich.Pain;
 import main.java.sandwich.Sandwich;

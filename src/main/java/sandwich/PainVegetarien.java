@@ -1,6 +1,6 @@
 package main.java.sandwich;
 
-import NomAliment.NomPain;
+import main.java.nomAliment.*;
 import main.java.customException.OutOfRangeKilocariesException;
 import main.java.inter.estVegetarien;
 

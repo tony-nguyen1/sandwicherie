@@ -1,4 +1,4 @@
-package NomAliment;
+package main.java.nomAliment;
 
 /**
  * 

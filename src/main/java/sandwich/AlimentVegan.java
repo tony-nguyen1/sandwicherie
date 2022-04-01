@@ -2,9 +2,9 @@ package main.java.sandwich;
 
 import java.util.*;
 
-import NomAliment.NomAlimentVegan;
 import main.java.customException.OutOfRangeKilocariesException;
 import main.java.inter.estVegan;
+import main.java.nomAliment.*;
 
 /**
  * 
