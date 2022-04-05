@@ -4,5 +4,8 @@ package main.java.nomAliment;
  * 
  */
 public enum NomAlimentVegan {
-	Tomate
+	Tomate,
+	Salade,
+	Cornichon,
+	Oignon
 }

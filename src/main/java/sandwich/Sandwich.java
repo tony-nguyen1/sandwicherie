@@ -11,6 +11,8 @@ import main.java.inter.ISauce;
  *  
  *  Application.java main()
  *  -> Déplacer des ingrédients entre sandwichs
+ *  -> Remplacer genericété class par intefarce ?
+ *  private LinkedList<G> garniture -> <Aliment>
  */
 
 
@@ -63,17 +65,30 @@ public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture> imp
     }
     
     /**
-     * Déplace un ingrédient depuis this.garniture vers un autre sandwich s 
+     * Déplace un ingrédient depuis un autre sandwich source vers this 
      * 
-     * @param s
-     * @param uneGarniture déjà dans this.garniture
+     * @param source
+     * @param uneGarniture déjà dans source
      */
-    public void deplacerIngredient(Sandwich<? extends P, ?, ? extends G> s, G uneGarniture) {
-//    	this.garniture.removeLastOccurrence(uneGarniture);
-//    	s.ajouterIngredient(uneGarniture);
-    	
+    public void deplacerIngredientDepuis(Sandwich<? extends P, ? extends S, ? extends G> source, G uneGarniture) {
+    	source.garniture.removeLastOccurrence(uneGarniture);
+    	this.ajouterIngredient(uneGarniture);
     }
     
+    
+    /**
+     * Déplace un ingrédient de this.garniture VERS le puits (de données)
+     * 
+     * Pré-requis: i < this.garniture.length - 1
+     * 
+     * @param puits
+     * @param i indice entier
+     */
+    public void deplacerIngredientVers(Sandwich<? super P, ? super S, ? super G> puits, int i) {
+    	G uneGarniture = this.getNthGarniture(i);
+    	this.garniture.removeLastOccurrence(uneGarniture);
+    	puits.ajouterIngredient(uneGarniture);
+    }
     
     
     public G getNthGarniture(int i) {

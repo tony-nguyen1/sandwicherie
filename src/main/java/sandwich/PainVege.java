@@ -6,7 +6,12 @@ import main.java.inter.estVegetarien;
 
 public class PainVege extends Pain implements estVegetarien{
 
-	public PainVege(NomPain n, float f) throws OutOfRangeKilocariesException {
+	public PainVege(NomPainVegetarien n, float f) throws OutOfRangeKilocariesException {
+		super(n.toString(), f);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public PainVege(NomPainVegan n, float f) throws OutOfRangeKilocariesException {
 		super(n.toString(), f);
 		// TODO Auto-generated constructor stub
 	}

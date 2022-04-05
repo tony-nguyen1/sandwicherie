@@ -4,5 +4,7 @@ package main.java.nomAliment;
  * 
  */
 public enum NomAlimentVegetarien {
-	Oeuf
+	Oeuf,
+	Fromage,
+	Miel
 }
