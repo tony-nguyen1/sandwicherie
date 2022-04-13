@@ -6,8 +6,8 @@ import main.java.inter.estVegan;
 
 public class PainVegan extends PainVege implements estVegan{
 
-	public PainVegan(NomPain nomPain, float f) throws OutOfRangeKilocariesException {
-		super(nomPain.toString(), f);
+	public PainVegan(NomPainVegan n, float f) throws OutOfRangeKilocariesException {
+		super(n.toString(), f);
 	}
 
 }

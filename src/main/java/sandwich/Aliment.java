@@ -1,11 +1,9 @@
 package main.java.sandwich;
 
-import java.util.*;
 
 import main.java.customException.OutOfRangeKilocariesException;
 import main.java.inter.IAliment;
 
-import java.lang.UnsupportedOperationException;
 
 /**
  * 

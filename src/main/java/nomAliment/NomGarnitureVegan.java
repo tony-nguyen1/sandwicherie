@@ -3,7 +3,7 @@ package main.java.nomAliment;
 /**
  * 
  */
-public enum NomAlimentVegan {
+public enum NomGarnitureVegan {
 	Tomate,
 	Salade,
 	Cornichon,

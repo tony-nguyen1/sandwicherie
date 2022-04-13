@@ -1,6 +1,6 @@
 package main.java.nomAliment;
 
-public enum NomSauceVegetarien {
+public enum NomSauceVegetarienne {
 		Mayo,
 		Aïoli,
 		Béarnaise

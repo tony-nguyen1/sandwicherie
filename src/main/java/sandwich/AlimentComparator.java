@@ -2,7 +2,7 @@ package main.java.sandwich;
 
 import java.util.Comparator;
 
-public class SandwichComparator implements Comparator<Aliment> {
+public class AlimentComparator implements Comparator<Aliment> {
 
 	@Override
 	public int compare(Aliment o1, Aliment o2) {

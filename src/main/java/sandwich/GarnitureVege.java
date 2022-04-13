@@ -2,7 +2,7 @@ package main.java.sandwich;
 
 import main.java.customException.OutOfRangeKilocariesException;
 import main.java.inter.estVegetarien;
-import main.java.nomAliment.NomAlimentVegetarien;
+import main.java.nomAliment.NomGarnitureVegetarienne;
 
 public class GarnitureVege extends Garniture implements estVegetarien {
 
@@ -12,7 +12,7 @@ public class GarnitureVege extends Garniture implements estVegetarien {
 	}
 	
 	
-	public GarnitureVege(NomAlimentVegetarien n, float f) throws OutOfRangeKilocariesException {
+	public GarnitureVege(NomGarnitureVegetarienne n, float f) throws OutOfRangeKilocariesException {
 		this(n.toString(), f);
 		// TODO Auto-generated constructor stub
 	}
