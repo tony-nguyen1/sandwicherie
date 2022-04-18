@@ -7,16 +7,23 @@ import main.java.sandwich.*;
 import main.java.customException.OutOfRangeKilocariesException;
 import main.java.nomAliment.*;
 
-/***
- * TO DO : 
- * ->Sandwich
- *     ->fct° ingrédient en commun ?
- * ->Aliment
- *     ->comparaison
- * ->SanwichVege hérite de Sandwich
- *     ->on peut mettre des aliments vegan dedans
- * ->SandwichVegan hérite de SandwichVege
+/**
+ * Exemple pour:
+ * -déclarer, instancier des sandiwchs
+ * -ajouter, déplacer des ingrédients
+ * -etc ...
  */
+
+/*
+compiler et exécuter:
+clementine.nebut@PC:~/sandwicherie$ make all
+
+compiler:
+clementine.nebut@PC:~/sandwicherie$ make compile
+
+exécuter:
+clementine.nebut@PC:~/sandwicherie$ make run
+*/
 
 public class Application {
 
@@ -86,31 +93,45 @@ public class Application {
 		System.out.println();
 		
 		//(5) cas incorrects, ne compile pas
-		/** TODO -> à continuer */
-//		sandwichVege.ajouterIngredient(new Garniture(NomGarniture.Saumon, 0));
+		System.out.println("Cas incorrects");
+		//// création de sandwich /////////////////////////////////////////////////////////////////////////////////////////////////
 //		Sandwich<Sauce, Sauce, Garniture> sandwichFaux = new Sandwich<Sauce,Sauce,Garniture>(new Sauce(null,0), new Sauce(null,0));
-//		sandwichVege.deplacerIngredientVers(sandwichVegan, 1);
+//		Sandwich<Pain, Sauce, Pain> sandwichFaux = new Sandwich<Pain,Sauce,Pain>(new Pain(null,0), new Sauce(null,0)); // sandwich aux pains
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
+		//// ajouter ingrédients //////////////////////////////////////////////////////////////////
+//		sandwichVege.ajouterIngredient(new Garniture(NomGarniture.Saumon, 0));
 //		sandwichVegan.ajouterIngredient(new GarnitureVege(NomGarnitureVegetarienne.Fromage,0));
-
+//		sandwichVegan.ajouterIngredient(new Garniture(NomGarniture.Dinde,0));
+		///////////////////////////////////////////////////////////////////////////////////////////
+		
+		//// déplacer ingrédients //////////////////////////////////////////////////////////////////
+//		sandwichVege.deplacerIngredientVers(sandwichVegan, 1); // sandwichVege -> sandwichVegan
+//		sandwichVegan.deplacerIngredientDepuis(sandwichVege, 0); // sandwichVegan <- sandwichVege
+		
+//		sandwichNormal.deplacerIngredientVers(sandwichVege, 1); // sandwichNormal -> sandwichVege
+//		sandwichVege.deplacerIngredientDepuis(sandwichNormal, 0); // sandwichVege <- sandwichNormal
+		
+//		sandwichNormal.deplacerIngredientVers(sandwichVegan, 1); // sandwichNormal -> sandwichVegan
+//		sandwichVegan.deplacerIngredientDepuis(sandwichNormal, 0); // sandwichVegan <- sandwichNormal
+		////////////////////////////////////////////////////////////////////////////////////////////
+		
 		
 		//(6) plante
+//		new Garniture(NomGarniture.Jambon,-1f);
 //		new Garniture(NomGarniture.Jambon,1001f);
+		System.out.println();
 		
 		System.out.println("... fin");
 	}
 
 }
+
+
 /*
-compiler :
-tony.nguyen@etu.umontpellier.fr@r24:~/eclipse-workspace/project/sandwicherie$ javac -cp ./src ./src/main/java/app/Application.java 
+ * https://javarevisited.blogspot.com/2015/04/error-could-not-find-or-load-main-class-helloworld-java.html#axzz7P6Fcb3YD
+ */
 
-exécuter : 
-tony.nguyen@etu.umontpellier.fr@r24:~/eclipse-workspace/project/sandwicherie/src$ java main.java.app.Application
-... fin
-
-source : https://javarevisited.blogspot.com/2015/04/error-could-not-find-or-load-main-class-helloworld-java.html#axzz7P6Fcb3YD
-*/
 
 /*
 git
