@@ -17,7 +17,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Main",
+					"name": "SandwicherieClassDiagram",
 					"defaultDiagram": true,
 					"ownedViews": [
 						{
@@ -65,7 +65,7 @@
 											"top": 1182,
 											"width": 718,
 											"height": 13,
-											"text": "Package1"
+											"text": "main.java.nomAliment"
 										},
 										{
 											"_type": "LabelView",
@@ -6814,7 +6814,7 @@
 											"font": "Arial;13;0",
 											"left": 949,
 											"top": 1237,
-											"width": 87.40087890625,
+											"width": 119.970703125,
 											"height": 13,
 											"text": "«enumeration»"
 										},
@@ -6828,7 +6828,7 @@
 											"font": "Arial;13;1",
 											"left": 949,
 											"top": 1252,
-											"width": 87.40087890625,
+											"width": 119.970703125,
 											"height": 13,
 											"text": "NomGarniture"
 										},
@@ -6843,9 +6843,9 @@
 											"font": "Arial;13;0",
 											"left": -632,
 											"top": -504,
-											"width": 96.0908203125,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -6866,7 +6866,7 @@
 									"font": "Arial;13;0",
 									"left": 944,
 									"top": 1232,
-									"width": 97.40087890625,
+									"width": 129.970703125,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGAHa9LIZ5czfU="
@@ -6958,12 +6958,68 @@
 									"model": {
 										"$ref": "AAAAAAGAHa9LIJ5YgfA="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGeTNCHRBtc=",
+											"_parent": {
+												"$ref": "AAAAAAGAHa9LIp5kmhM="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGeTAiHO9hk="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 949,
+											"top": 1275,
+											"width": 119.970703125,
+											"height": 13,
+											"text": "Jambon",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGedciHYpso=",
+											"_parent": {
+												"$ref": "AAAAAAGAHa9LIp5kmhM="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGedZSHVr3c="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 949,
+											"top": 1290,
+											"width": 119.970703125,
+											"height": 13,
+											"text": "DindeCiandeHachée",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGe2LCHg5VM=",
+											"_parent": {
+												"$ref": "AAAAAAGAHa9LIp5kmhM="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGe2ICHdBO0="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 949,
+											"top": 1305,
+											"width": 119.970703125,
+											"height": 13,
+											"text": "Saumon",
+											"horizontalAlignment": 0
+										}
+									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
 									"left": 944,
 									"top": 1270,
-									"width": 97.40087890625,
-									"height": 10
+									"width": 129.970703125,
+									"height": 53
 								}
 							],
 							"containerView": {
@@ -6974,8 +7030,8 @@
 							"containerChangeable": true,
 							"left": 944,
 							"top": 1232,
-							"width": 97.40087890625,
-							"height": 48,
+							"width": 129.970703125,
+							"height": 91,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAHa9LIZ5bclc="
 							},
@@ -7056,9 +7112,9 @@
 											"font": "Arial;13;0",
 											"left": -808,
 											"top": -424,
-											"width": 96.0908203125,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -7325,9 +7381,9 @@
 											"font": "Arial;13;0",
 											"left": 904,
 											"top": 568,
-											"width": 96.0908203125,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -7440,12 +7496,32 @@
 									"model": {
 										"$ref": "AAAAAAGAHW9XXpsTWdU="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGTxJDZRzyg=",
+											"_parent": {
+												"$ref": "AAAAAAGAHW9XX5sf4GE="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGTxFzZOcWk="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 741,
+											"top": 1299,
+											"width": 86.72802734375,
+											"height": 13,
+											"text": "Bolognaise",
+											"horizontalAlignment": 0
+										}
+									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
 									"left": 736,
 									"top": 1294,
 									"width": 96.72802734375,
-									"height": 10
+									"height": 23
 								}
 							],
 							"containerView": {
@@ -7457,7 +7533,7 @@
 							"left": 736,
 							"top": 1256,
 							"width": 96.72802734375,
-							"height": 48,
+							"height": 61,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAHW9XXpsWXaQ="
 							},
@@ -7507,8 +7583,8 @@
 											},
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;0",
-											"left": 653,
-											"top": 1349,
+											"left": 709,
+											"top": 1557,
 											"width": 122.09716796875,
 											"height": 13,
 											"text": "«enumeration»"
@@ -7521,11 +7597,11 @@
 											},
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;1",
-											"left": 653,
-											"top": 1364,
+											"left": 709,
+											"top": 1572,
 											"width": 122.09716796875,
 											"height": 13,
-											"text": "NomPainVegetarien"
+											"text": "NomPainVegan"
 										},
 										{
 											"_type": "LabelView",
@@ -7536,11 +7612,11 @@
 											"visible": false,
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;0",
-											"left": -880,
-											"top": -600,
-											"width": 96.0908203125,
+											"left": -768,
+											"top": -184,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -7551,16 +7627,16 @@
 											"visible": false,
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;0",
-											"left": -880,
-											"top": -600,
+											"left": -768,
+											"top": -184,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": 648,
-									"top": 1344,
+									"left": 704,
+									"top": 1552,
 									"width": 132.09716796875,
 									"height": 38,
 									"stereotypeLabel": {
@@ -7588,8 +7664,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -456,
-									"top": -376,
+									"left": -400,
+									"top": -168,
 									"width": 10,
 									"height": 10
 								},
@@ -7605,8 +7681,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -456,
-									"top": -376,
+									"left": -400,
+									"top": -168,
 									"width": 10,
 									"height": 10
 								},
@@ -7622,8 +7698,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -456,
-									"top": -376,
+									"left": -400,
+									"top": -168,
 									"width": 10,
 									"height": 10
 								},
@@ -7639,8 +7715,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -456,
-									"top": -376,
+									"left": -400,
+									"top": -168,
 									"width": 10,
 									"height": 10
 								},
@@ -7653,12 +7729,68 @@
 									"model": {
 										"$ref": "AAAAAAGAHbCUqp9DtLA="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGSKSjY6ATo=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbCUq59PKZI="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGSKNzY3AZc="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 709,
+											"top": 1595,
+											"width": 122.09716796875,
+											"height": 13,
+											"text": "Ketchup",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGSfojZBTdc=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbCUq59PKZI="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGSfljY+ZSY="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 709,
+											"top": 1610,
+											"width": 122.09716796875,
+											"height": 13,
+											"text": "Pesto",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGSozTZI2bE=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbCUq59PKZI="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGSowDZFAO0="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 709,
+											"top": 1625,
+											"width": 122.09716796875,
+											"height": 13,
+											"text": "Rouille",
+											"horizontalAlignment": 0
+										}
+									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": 648,
-									"top": 1382,
+									"left": 704,
+									"top": 1590,
 									"width": 132.09716796875,
-									"height": 10
+									"height": 53
 								}
 							],
 							"containerView": {
@@ -7667,10 +7799,10 @@
 							"fillColor": "#f4d3d3",
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 648,
-							"top": 1344,
+							"left": 704,
+							"top": 1552,
 							"width": 132.09716796875,
-							"height": 48,
+							"height": 91,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAHbCUq59G9WQ="
 							},
@@ -7751,9 +7883,9 @@
 											"font": "Arial;13;0",
 											"left": -1304,
 											"top": -400,
-											"width": 96.0908203125,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -7866,12 +7998,32 @@
 									"model": {
 										"$ref": "AAAAAAGAHa+jH56GPU0="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGX//zaCOA4=",
+											"_parent": {
+												"$ref": "AAAAAAGAHa+jH56SrLE="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGX/8TZ/6A8="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 493,
+											"top": 1275,
+											"width": 86.72802734375,
+											"height": 13,
+											"text": "PainAuLardon",
+											"horizontalAlignment": 0
+										}
+									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
 									"left": 488,
 									"top": 1270,
 									"width": 96.72802734375,
-									"height": 10
+									"height": 23
 								}
 							],
 							"containerView": {
@@ -7883,7 +8035,7 @@
 							"left": 488,
 							"top": 1232,
 							"width": 96.72802734375,
-							"height": 48,
+							"height": 61,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAHa+jH56JlpI="
 							},
@@ -7964,9 +8116,9 @@
 											"font": "Arial;13;0",
 											"left": -968,
 											"top": -528,
-											"width": 96.0908203125,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -8079,12 +8231,68 @@
 									"model": {
 										"$ref": "AAAAAAGAHbAeQp7mVXg="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGUxnjZYmK0=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbAeQ57yIgM="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGUxizZVMGo="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 445,
+											"top": 1411,
+											"width": 122.09716796875,
+											"height": 13,
+											"text": "PainAuLait",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGVJLjZfWmw=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbAeQ57yIgM="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGVJITZc7Po="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 445,
+											"top": 1426,
+											"width": 122.09716796875,
+											"height": 13,
+											"text": "PainFromage",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGVbQTZmd3M=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbAeQ57yIgM="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGVbNTZjVWk="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 445,
+											"top": 1441,
+											"width": 122.09716796875,
+											"height": 13,
+											"text": "PainViennois",
+											"horizontalAlignment": 0
+										}
+									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
 									"left": 440,
 									"top": 1406,
 									"width": 132.09716796875,
-									"height": 10
+									"height": 53
 								}
 							],
 							"containerView": {
@@ -8096,7 +8304,7 @@
 							"left": 440,
 							"top": 1368,
 							"width": 132.09716796875,
-							"height": 48,
+							"height": 91,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAHbAeQp7pLeY="
 							},
@@ -8148,7 +8356,7 @@
 											"font": "Arial;13;0",
 											"left": 469,
 											"top": 1533,
-											"width": 94.63720703125,
+											"width": 125.72802734375,
 											"height": 13,
 											"text": "«enumeration»"
 										},
@@ -8162,7 +8370,7 @@
 											"font": "Arial;13;1",
 											"left": 469,
 											"top": 1548,
-											"width": 94.63720703125,
+											"width": 125.72802734375,
 											"height": 13,
 											"text": "NomPainVegan"
 										},
@@ -8177,9 +8385,9 @@
 											"font": "Arial;13;0",
 											"left": -992,
 											"top": 128,
-											"width": 96.0908203125,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -8200,7 +8408,7 @@
 									"font": "Arial;13;0",
 									"left": 464,
 									"top": 1528,
-									"width": 104.63720703125,
+									"width": 135.72802734375,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGAHa/rE567vTU="
@@ -8292,12 +8500,68 @@
 									"model": {
 										"$ref": "AAAAAAGAHa/rEZ63loc="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGWTqzZt6zs=",
+											"_parent": {
+												"$ref": "AAAAAAGAHa/rFJ7Dfvw="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGWTnTZq0Rs="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 469,
+											"top": 1571,
+											"width": 125.72802734375,
+											"height": 13,
+											"text": "PainComplet",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGWqJjZ0Vp4=",
+											"_parent": {
+												"$ref": "AAAAAAGAHa/rFJ7Dfvw="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGWqFjZxhOc="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 469,
+											"top": 1586,
+											"width": 125.72802734375,
+											"height": 13,
+											"text": "PainGrainesSesames",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGXHuDZ7iv8=",
+											"_parent": {
+												"$ref": "AAAAAAGAHa/rFJ7Dfvw="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGXHqzZ4tI4="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 469,
+											"top": 1601,
+											"width": 125.72802734375,
+											"height": 13,
+											"text": "PainDeMie",
+											"horizontalAlignment": 0
+										}
+									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
 									"left": 464,
 									"top": 1566,
-									"width": 104.63720703125,
-									"height": 10
+									"width": 135.72802734375,
+									"height": 53
 								}
 							],
 							"containerView": {
@@ -8308,8 +8572,8 @@
 							"containerChangeable": true,
 							"left": 464,
 							"top": 1528,
-							"width": 104.63720703125,
-							"height": 48,
+							"width": 135.72802734375,
+							"height": 91,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAHa/rE566MQc="
 							},
@@ -8359,9 +8623,9 @@
 											},
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;0",
-											"left": 677,
-											"top": 1525,
-											"width": 97.54443359375,
+											"left": 685,
+											"top": 1365,
+											"width": 116.34619140625,
 											"height": 13,
 											"text": "«enumeration»"
 										},
@@ -8373,9 +8637,9 @@
 											},
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;1",
-											"left": 677,
-											"top": 1540,
-											"width": 97.54443359375,
+											"left": 685,
+											"top": 1380,
+											"width": 116.34619140625,
 											"height": 13,
 											"text": "NomSauceVege"
 										},
@@ -8388,11 +8652,11 @@
 											"visible": false,
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;0",
-											"left": -880,
-											"top": 8,
-											"width": 96.0908203125,
+											"left": -864,
+											"top": -312,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -8403,17 +8667,17 @@
 											"visible": false,
 											"fillColor": "#f4d3d3",
 											"font": "Arial;13;0",
-											"left": -880,
-											"top": 8,
+											"left": -864,
+											"top": -312,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": 672,
-									"top": 1520,
-									"width": 107.54443359375,
+									"left": 680,
+									"top": 1360,
+									"width": 126.34619140625,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGAHbBMEJ8YUL8="
@@ -8440,8 +8704,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -496,
-									"top": -24,
+									"left": -488,
+									"top": -184,
 									"width": 10,
 									"height": 10
 								},
@@ -8457,8 +8721,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -496,
-									"top": -24,
+									"left": -488,
+									"top": -184,
 									"width": 10,
 									"height": 10
 								},
@@ -8474,8 +8738,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -496,
-									"top": -24,
+									"left": -488,
+									"top": -184,
 									"width": 10,
 									"height": 10
 								},
@@ -8491,8 +8755,8 @@
 									"visible": false,
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": -496,
-									"top": -24,
+									"left": -488,
+									"top": -184,
 									"width": 10,
 									"height": 10
 								},
@@ -8505,12 +8769,68 @@
 									"model": {
 										"$ref": "AAAAAAGAHbBMD58UnJk="
 									},
+									"subViews": [
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGOSQzYi/o8=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbBMEJ8gY/0="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGOSHDYfsWE="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 685,
+											"top": 1403,
+											"width": 116.34619140625,
+											"height": 13,
+											"text": "Mayo",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGOzTDYp/GA=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbBMEJ8gY/0="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGOzOjYmHbo="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 685,
+											"top": 1418,
+											"width": 116.34619140625,
+											"height": 13,
+											"text": "Aïoli",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLEnumerationLiteralView",
+											"_id": "AAAAAAGAPGPIQjYwhVk=",
+											"_parent": {
+												"$ref": "AAAAAAGAHbBMEJ8gY/0="
+											},
+											"model": {
+												"$ref": "AAAAAAGAPGPINTYtPXw="
+											},
+											"fillColor": "#f4d3d3",
+											"font": "Arial;13;0",
+											"left": 685,
+											"top": 1433,
+											"width": 116.34619140625,
+											"height": 13,
+											"text": "Béarnaise",
+											"horizontalAlignment": 0
+										}
+									],
 									"fillColor": "#f4d3d3",
 									"font": "Arial;13;0",
-									"left": 672,
-									"top": 1558,
-									"width": 107.54443359375,
-									"height": 10
+									"left": 680,
+									"top": 1398,
+									"width": 126.34619140625,
+									"height": 53
 								}
 							],
 							"containerView": {
@@ -8519,10 +8839,10 @@
 							"fillColor": "#f4d3d3",
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 672,
-							"top": 1520,
-							"width": 107.54443359375,
-							"height": 48,
+							"left": 680,
+							"top": 1360,
+							"width": 126.34619140625,
+							"height": 91,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAHbBMEJ8X0rY="
 							},
@@ -8603,9 +8923,9 @@
 											"font": "Arial;13;0",
 											"left": -848,
 											"top": -208,
-											"width": 96.0908203125,
+											"width": 166.15625,
 											"height": 13,
-											"text": "(from Package1)"
+											"text": "(from main.java.nomAliment)"
 										},
 										{
 											"_type": "LabelView",
@@ -11236,7 +11556,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Package1",
+					"name": "main.java.nomAliment",
 					"ownedElements": [
 						{
 							"_type": "UMLEnumeration",
@@ -11244,7 +11564,33 @@
 							"_parent": {
 								"$ref": "AAAAAAGAHcF55aALgxM="
 							},
-							"name": "NomGarniture"
+							"name": "NomGarniture",
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGeTAiHO9hk=",
+									"_parent": {
+										"$ref": "AAAAAAGAHa9LIJ5YgfA="
+									},
+									"name": "Jambon"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGedZSHVr3c=",
+									"_parent": {
+										"$ref": "AAAAAAGAHa9LIJ5YgfA="
+									},
+									"name": "DindeCiandeHachée"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGe2ICHdBO0=",
+									"_parent": {
+										"$ref": "AAAAAAGAHa9LIJ5YgfA="
+									},
+									"name": "Saumon"
+								}
+							]
 						},
 						{
 							"_type": "UMLEnumeration",
@@ -11286,7 +11632,17 @@
 							"_parent": {
 								"$ref": "AAAAAAGAHcF55aALgxM="
 							},
-							"name": "NomSauce"
+							"name": "NomSauce",
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGTxFzZOcWk=",
+									"_parent": {
+										"$ref": "AAAAAAGAHW9XXpsTWdU="
+									},
+									"name": "Bolognaise"
+								}
+							]
 						},
 						{
 							"_type": "UMLEnumeration",
@@ -11294,7 +11650,33 @@
 							"_parent": {
 								"$ref": "AAAAAAGAHcF55aALgxM="
 							},
-							"name": "NomPainVegetarien"
+							"name": "NomPainVegan",
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGSKNzY3AZc=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbCUqp9DtLA="
+									},
+									"name": "Ketchup"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGSfljY+ZSY=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbCUqp9DtLA="
+									},
+									"name": "Pesto"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGSowDZFAO0=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbCUqp9DtLA="
+									},
+									"name": "Rouille"
+								}
+							]
 						},
 						{
 							"_type": "UMLEnumeration",
@@ -11302,7 +11684,17 @@
 							"_parent": {
 								"$ref": "AAAAAAGAHcF55aALgxM="
 							},
-							"name": "NomPain"
+							"name": "NomPain",
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGX/8TZ/6A8=",
+									"_parent": {
+										"$ref": "AAAAAAGAHa+jH56GPU0="
+									},
+									"name": "PainAuLardon"
+								}
+							]
 						},
 						{
 							"_type": "UMLEnumeration",
@@ -11310,7 +11702,33 @@
 							"_parent": {
 								"$ref": "AAAAAAGAHcF55aALgxM="
 							},
-							"name": "NomPainVegetarien"
+							"name": "NomPainVegetarien",
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGUxizZVMGo=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbAeQp7mVXg="
+									},
+									"name": "PainAuLait"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGVJITZc7Po=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbAeQp7mVXg="
+									},
+									"name": "PainFromage"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGVbNTZjVWk=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbAeQp7mVXg="
+									},
+									"name": "PainViennois"
+								}
+							]
 						},
 						{
 							"_type": "UMLEnumeration",
@@ -11318,7 +11736,33 @@
 							"_parent": {
 								"$ref": "AAAAAAGAHcF55aALgxM="
 							},
-							"name": "NomPainVegan"
+							"name": "NomPainVegan",
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGWTnTZq0Rs=",
+									"_parent": {
+										"$ref": "AAAAAAGAHa/rEZ63loc="
+									},
+									"name": "PainComplet"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGWqFjZxhOc=",
+									"_parent": {
+										"$ref": "AAAAAAGAHa/rEZ63loc="
+									},
+									"name": "PainGrainesSesames"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGXHqzZ4tI4=",
+									"_parent": {
+										"$ref": "AAAAAAGAHa/rEZ63loc="
+									},
+									"name": "PainDeMie"
+								}
+							]
 						},
 						{
 							"_type": "UMLEnumeration",
@@ -11326,7 +11770,33 @@
 							"_parent": {
 								"$ref": "AAAAAAGAHcF55aALgxM="
 							},
-							"name": "NomSauceVege"
+							"name": "NomSauceVege",
+							"literals": [
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGOSHDYfsWE=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbBMD58UnJk="
+									},
+									"name": "Mayo"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGOzOjYmHbo=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbBMD58UnJk="
+									},
+									"name": "Aïoli"
+								},
+								{
+									"_type": "UMLEnumerationLiteral",
+									"_id": "AAAAAAGAPGPINTYtPXw=",
+									"_parent": {
+										"$ref": "AAAAAAGAHbBMD58UnJk="
+									},
+									"name": "Béarnaise"
+								}
+							]
 						},
 						{
 							"_type": "UMLEnumeration",
