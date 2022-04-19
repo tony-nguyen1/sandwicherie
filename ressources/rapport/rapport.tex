@@ -1,0 +1,139 @@
+\documentclass[a4paper]{article}
+
+% Options possibles : 10pt, 11pt, 12pt (taille de la fonte)
+%                     oneside, twoside (recto simple, recto-verso)
+%                     draft, final (stade de développement)
+
+\usepackage[utf8]{inputenc}   % LaTeX, comprends les accents !
+\usepackage[T1]{fontenc}      % Police contenant les caractères français
+\usepackage[francais]{babel}  
+
+
+\usepackage[a4paper,left=2cm,right=2cm]{geometry}% Format de la page, réduction des marges
+\usepackage{graphicx}  % pour inclure des images
+
+\usepackage{algorithm}
+\usepackage{algpseudocode} % algorithme
+
+\usepackage{listings} % code
+
+\pagestyle{headings}        % Pour mettre des entêtes avec les titres
+                              % des sections en haut de page
+
+\title{Sandwicherie\\         % Les paramètres du titre : titre, auteur, date
+Devoir Maison de Modélisation}          
+\author{Groupe \emph{B}\\
+  \emph{Romain Campillo, Tony Nguyen}\\
+  \emph{https://github.com/tony-nguyen1/sandwicherie}\\
+  L2 informatique\\
+  Faculté des Sciences\\
+Université de Montpellier.}
+\date{\today}             
+
+\renewcommand*\contentsname{Sommaire}
+
+\begin{document}
+\maketitle
+\begin{center}
+    \includegraphics[scale=0.09]{./logo.png}
+\end{center}
+\newpage
+\tableofcontents
+\clearpage
+\section{Sandwich générique}
+\subsection{Généricité}
+
+\begin{lstlisting}[language=Java, caption=Entête de class Sandwich]
+    public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture>
+\end{lstlisting}
+\paragraph{}
+Sandwich est une classe nécessairement paraméter par le type de pain utilisé, le type de sauce et le type des autres ingrédients à l'intérieur du sandwich.
+
+\paragraph{Création d'un sandwich en 2 temps}
+\subparagraph{Instantiation d'un sandwich}
+Lors de la création du Sandwich, les attributs monPain et maSauce sont initialisés avec les objets passés en paramètre du constructeur, et l’attribut garniture est initialisé par une liste chaînée vide utilisé comme une pile.
+
+Le pain et la sauce doivent être de type P et S respectivement ou les étendre.
+
+\subparagraph{Remplissage d'un sandwich}
+Après la création d'un sandwich, l'utilisateur manipulant nos classes doit faire attention à remplir correctement les sandwichs. Un sandwich doit être composer de Garniture présent seulement chez cette instance là et pas dans un autre sandwich. Une instance d'une Garniture représente cette aliment avec une quantité égale à 1. Ainsi, si nous voulons 2 tomates dans notre sandwich, il faut 2 instance de la ganiture tomate.
+
+Les garnitures ajoutés doivent être de type G ou l'étendre.
+\clearpage
+\paragraph{Déplacer un ingrédient d'un sadwich à l'autre}
+\subparagraph{Puits de donnée}
+Il serait souhaitable que l'on puisse mettre de la garniture végétarienne dans un 
+sandwich acceptant toute garniture (cas n°1). 
+
+Mais l'inverse n'est pas vrai 
+(cas n°2), nous ne voulons \emph{PAS} mettre une garniture quelconque dans un 
+sandwich composé de garniture végétarienne seulement. Car dans le sandwichA, nous 
+ne sommes pas garanties que la garniture que nous allons déplacer est végétarienne.
+
+Pour achever cela, nous avons utiliser "? super G" comme 3 type du puits.
+\begin{lstlisting}[language=Java, caption=Déplacer l'ingrédient d'indice i depuis this aux puits]
+    public void deplacerIngredientVers(Sandwich<? super P, ? super S, ? super G>
+     puits, int i) {
+        G uneGarniture = this.getNthGarniture(i);
+        this.garniture.removeLastOccurrence(uneGarniture);
+        puits.ajouterIngredient(uneGarniture);
+        }
+\end{lstlisting}
+\begin{lstlisting}[language=Java, caption=Exemple puis de donnée]
+    Sandwich<Pain, Sauce, Garniture> sandwichA;
+    Sandwich<Pain, Sauce, GarnitureVege> sandwichB;
+    
+    // on les instancie correctement
+    // on remplit les sandwichs
+        
+    // cas 1, ce qu'on veut 
+    sandwichB.deplacerIngredientVers(sandwichA, 0);
+    // cas 2, ce qu'on ne veut pas
+    sandwichA.deplacerIngredientVers(sandwichB, 0); 
+\end{lstlisting}
+\begin{lstlisting}[language=Java, caption=Déplacer l'ingrédient d'indice i du puits jusqu'à this]
+    public void deplacerIngredientDepuis(
+     Sandwich<? extends P, ? extends S, ? extends G> source, int i) {
+        G uneGarniture = source.garniture.get(i);
+        source.garniture.removeLastOccurrence(uneGarniture);
+        this.ajouterIngredient(uneGarniture);
+        }
+\end{lstlisting}
+\subparagraph{Source de donnée}
+C'est la même chose mais dans l'autre sens. Du coup, nous avons utilisé "? extends G".
+
+\clearpage
+\section{Les aliments}
+
+\paragraph{}
+\subparagraph{Aliment}
+Dans nos sandwich, il peut y avoir soit du pain, soit de la sauce, soit de la garniture. Ils ont un parent abstrait (Aliment) pour factoriser un peu de code.
+
+\subparagraph*{Hiérarchie}
+Le pain le plus général est Pain (, il inclut le pain avec de la viande). Ses enfants sont plus spécialisés.
+
+Donc si on veut un pain plus précis il faut \emph{étendre} Pain. Si on veut une sauce plus particulière, il faut \emph{étendre} Sauce. Si on veut une garniture moins orthodoxe, il faut \emph{étendre} Garniture.
+
+Si veut qu'un pain/une sauce/une garniture soit végétarienne il faut \emph{implémenter} l'interface estVegetarien.
+
+Si veut qu'un pain/une sauce/une garniture soit vegan il faut \emph{implémenter} l'interface estVegan et étendre la version végétarienne.
+
+\subparagraph*{Constructeurs et nom}
+Expliquer des choses ici.
+
+\clearpage
+\section{Les autres sandwichs}
+
+\subsection{Sandwich végétarien}
+
+\subsection{Sandwich végan}
+
+\section{public static void main}
+
+\section{Iterator et Stream}
+
+
+\begin{lstlisting}[language=Java, caption=Java example]
+    System.out.println("Hello, World!");
+\end{lstlisting}
+\end{document}

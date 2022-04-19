@@ -5,3 +5,7 @@
 .metadata
 *.class
 
+#pour les fichiers crée par latex
+*.log
+*.aux
+*.toc
