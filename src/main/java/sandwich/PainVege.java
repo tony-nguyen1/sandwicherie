@@ -11,10 +11,6 @@ public class PainVege extends Pain implements estVegetarien{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public PainVege(NomPainVegan n, float f) throws OutOfRangeKilocariesException {
-		super(n.toString(), f);
-		// TODO Auto-generated constructor stub
-	}
 	
 	protected PainVege(String s, float f) throws OutOfRangeKilocariesException {
 		super(s,f);

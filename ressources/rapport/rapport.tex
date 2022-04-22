@@ -47,20 +47,20 @@ Université de Montpellier.}
     public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture>
 \end{lstlisting}
 \paragraph{}
-Sandwich est une classe nécessairement paramétrer par le type de pain utilisé, le type de sauce et le type des autres ingrédients à l'intérieur du sandwich.
+Sandwich est une classe nécessairement paramétrée par le type de pain utilisé, le type de sauce et le type des autres ingrédients à l'intérieur du sandwich.
 
 \paragraph{Création d'un sandwich en 2 temps}
-\subparagraph{Instantiation d'un sandwich}
-Lors de la création du Sandwich, les attributs monPain et maSauce sont initialisés avec les objets passés en paramètre du constructeur, et l’attribut garniture est initialisé par une liste chaînée vide utilisé comme une pile.
+\subparagraph{Instanciation d'un sandwich}
+Lors de la création du Sandwich, les attributs monPain et maSauce sont initialisés avec les objets passés en paramètre du constructeur, et l’attribut garniture est initialisé par une liste chaînée vide utilisée comme une pile.
 
 Le pain et la sauce doivent être de type P et S respectivement ou les étendre.
 
 \subparagraph{Remplissage d'un sandwich}
-Après la création d'un sandwich, l'utilisateur manipulant nos classes doit faire attention à remplir correctement les sandwichs. Un sandwich doit être composer de Garniture présent seulement chez cette instance là et pas dans un autre sandwich. Une instance d'une Garniture représente cette aliment avec une quantité égale à 1. Ainsi, si nous voulons 2 tomates dans notre sandwich, il faut 2 instance de la ganiture tomate.
+Après la création d'un sandwich, l'utilisateur manipulant nos classes doit faire attention à remplir correctement les sandwichs. Un sandwich doit être composé de Garniture présente seulement chez cette instance là et pas dans un autre sandwich. Une instance d'une Garniture représente cet aliment avec une quantité égale à 1. Ainsi, si nous voulons 2 tomates dans notre sandwich, il faut 2 instances de la ganiture tomate.
 
-Les garnitures ajoutés doivent être de type G ou l'étendre.
+Les garnitures ajoutées doivent être de type G ou l'étendre.
 \clearpage
-\paragraph{Déplacer un ingrédient d'un sadwich à l'autre}
+\paragraph{Déplacer un ingrédient d'un sandwich à un autre}
 \subparagraph{Puits de donnée}
 Il serait souhaitable que l'on puisse mettre de la garniture végétarienne dans un 
 sandwich acceptant toute garniture (cas n°1). 
@@ -68,11 +68,11 @@ sandwich acceptant toute garniture (cas n°1).
 Mais l'inverse n'est pas vrai 
 (cas n°2), nous ne voulons \emph{PAS} mettre une garniture quelconque dans un 
 sandwich composé de garniture végétarienne seulement. Car dans le sandwichA, nous 
-ne sommes pas garanties que la garniture que nous allons déplacer est végétarienne.
+ne sommes pas garantis que la garniture que nous allons déplacer est végétarienne.
 
-Pour achever cela, nous avons utiliser "? super G" comme 3 type du puits.
+Pour achever cela, nous avons utilisé "? super G" comme type du puits.
 \begin{lstlisting}[language=Java, caption=Déplacer l'ingrédient d'indice i depuis this aux puits]
-    public void deplacerIngredientVers(Sandwich<? super P, ? super S, ? super G>
+    public void deplacerIngredientVers(Sandwich< ?, ?, ? super G>
      puits, int i) {
         G uneGarniture = this.getNthGarniture(i);
         this.garniture.removeLastOccurrence(uneGarniture);
@@ -93,7 +93,7 @@ Pour achever cela, nous avons utiliser "? super G" comme 3 type du puits.
 \end{lstlisting}
 \begin{lstlisting}[language=Java, caption=Déplacer l'ingrédient d'indice i du puits jusqu'à this]
     public void deplacerIngredientDepuis(
-     Sandwich<? extends P, ? extends S, ? extends G> source, int i) {
+     Sandwich< ?, ?, ? extends G> source, int i) {
         G uneGarniture = source.garniture.get(i);
         source.garniture.removeLastOccurrence(uneGarniture);
         this.ajouterIngredient(uneGarniture);
@@ -107,10 +107,10 @@ C'est la même chose mais dans l'autre sens. Du coup, nous avons utilisé "? ext
 
 \paragraph{}
 \subparagraph{Aliment}
-Dans nos sandwich, il peut y avoir soit du pain, soit de la sauce, soit de la garniture. Ils ont un parent abstrait (Aliment) pour factoriser un peu de code.
+Dans nos sandwichs, il y a : du pain, de la sauce et éventuellement de la garniture. Ils ont un parent abstrait (Aliment) pour factoriser un peu de code.
 
 \subparagraph*{Hiérarchie}
-Le pain le plus général est Pain (, il inclut le pain avec de la viande). Ses enfants sont plus spécialisés.
+Le pain le plus général est Pain ( il inclut le pain avec de la viande). Ses enfants sont plus spécialisés.
 
 Donc si on veut un pain plus précis il faut \emph{étendre} Pain. Si on veut une sauce plus particulière, il faut \emph{étendre} Sauce. Si on veut une garniture moins orthodoxe, il faut \emph{étendre} Garniture.
 
@@ -119,7 +119,34 @@ Si veut qu'un pain/une sauce/une garniture soit végétarienne il faut \emph{imp
 Si veut qu'un pain/une sauce/une garniture soit vegan il faut \emph{implémenter} l'interface estVegan et étendre la version végétarienne.
 
 \subparagraph*{Constructeurs et nom}
-Expliquer des choses ici.
+
+\paragraph{} Puisque la classe Aliment possède un attribut "nom" qui est une chaine de caractères, rien n'empêcherait à l'utilisateur d'écrire \emph{GarnitureVegan("poulet", 100)}.
+
+Pour empêcher cela et "sécuriser" la saisie des aliments, toutes les sous-Classes d'Aliment sont associées à une énumération précise.
+
+Ainsi, pour initialiser une garniture Vegan, il faut préciser en paramètre l'énumération qui correspond à la GarnitureVegan.
+
+\begin{lstlisting}[language=Java, caption=Initialisation GarnitureVegan]
+    new GarnitureVegan(NomGarnitureVegan.Cornichon, 10f)
+\end{lstlisting}
+
+\paragraph{} Etant donné qu'une énumération ne peut pas hériter d'une autre énumération, un appel à super() n'est pas envisageable car le constructeur du parent ne prend pas en paramètre la même énumération.
+
+Pour contourner ce problème, nous avons décidé d'utiliser 2 constructeurs pour chaque type d'aliment : 
+
+\paragraph{}
+- Un constructeur public prenant en paramètre l'énumération correcte
+\paragraph{}
+- Un constructeur protected, destiné aux appels à super() des classes filles.
+
+\paragraph{}
+Le constructeur publique transforme l'objet de l'énumération en objet String et appel super(String nomAliment, float kcal), ce qui est autorisé puisque les constructeurs prenant
+en paramètre les chaines de caractères sont protected.
+De cette manière le nom de l'aliment remontera jusqu'à la classe Aliment en évitant les incohérences.
+
+\subparagraph{Exception}
+Tous les constructeurs peuvent renvoyer une \emph{OutOfRangeKilocariesException}. Cela vient de l'appel à \emph{setKilocalories} dans la classe Aliment, qui vérifie si le nombre de kilocalories entré est
+compris entre 0 et 1000 et lance une erreur le cas échéant.
 
 \clearpage
 \section{Les autres sandwichs}
@@ -130,9 +157,9 @@ Expliquer des choses ici.
      G extends GarnitureVege> extends Sandwich<P,S,G>
 \end{lstlisting}
 \paragraph{}
-La classe représantant les sandwich végétarien (SandwichVege) hérite du sandwich de base (Sandwich) et est elle-même paramétrer par des classes implémentant forcement l'interface estVegetarien.
+La classe représentant les sandwich végétariens (SandwichVege) hérite du sandwich de base (Sandwich) et est elle-même paramétrée par des classes implémentant forcément l'interface estVegetarien.
 \subparagraph{}
-PainVege, SauceVege et GarnitureVege implémentent estVegetarien et hérite de Pain, Sauce et Garniture respectivement.
+PainVege, SauceVege et GarnitureVege implémentent estVegetarien et héritent de Pain, Sauce et Garniture respectivement.
 
 \subsection{Sandwich végan}
 \begin{lstlisting}[language=Java, caption=Entête de la classe SandwichVegan]
@@ -140,12 +167,12 @@ PainVege, SauceVege et GarnitureVege implémentent estVegetarien et hérite de P
      G extends GarnitureVegan> extends SandwichVege<P, S, G>
 \end{lstlisting}
 \paragraph{}
-La classe représantant les sandwich vegan (SandwichVegan) hérite du sandwich végétarien (SandwichVege) et est elle-même paramétrer par des classes implémentant forcement l'interface estVegan.
+La classe représentant les sandwich vegan (SandwichVegan) hérite du sandwich végétarien (SandwichVege) et est elle-même paramétreée par des classes implémentant forcément l'interface estVegan.
 \subparagraph{}
-PainVegan, SauceVegan et GarnitureVegan implémentent estVegan et hérite de PainVege, SauceVege et GarnitureVege respectivement.
+PainVegan, SauceVegan et GarnitureVegan implémentent estVegan et héritent de PainVege, SauceVege et GarnitureVege respectivement.
 
 L'interface estVegan hérite de estVegetarien.
-\section{public static void main}
+
 
 \section{Iterator et Stream}
 \subsection{L'itérateur}
@@ -154,15 +181,13 @@ Nos sandwichs peuvent avoir une quantité de garniture \emph{sans restriction}.
 
 \subparagraph{}
 Avec un attribut privé dans l'itérateur, la fonction next() retourne le pain en premier, puis la sauce.
-Ensuite, nous allons réutiliser l'Iterator de notre collection données contenant notre garniture. Pas besoin de reécrire l'Iterator pour une LinkedList.
+Ensuite, nous réutilisons l'Iterator de notre collection contenant notre garniture (pas besoin de reécrire l'Iterator pour une LinkedList alors qu'il existe déjà).
 
 \subsection{Le flot}
 \paragraph{}
-Le stream nous envoie les aliments du sandwich. La fonction max() les compare pour nous et garde le plus grand d'après le Comparator donner en argument. 
+Le stream nous envoie les aliments du sandwich. La fonction max() les compare pour nous et garde le plus grand d'après le Comparator donné en argument. 
 \paragraph{Comparator}
-C'est un petit robot qui compare pour nous.
+C'est un petit robot qui compare pour nous deux aliments entre eux  par rapport à leur valeur énergétique.
+Il prend les kilocalories de chacun, fait la soustraction et renvoie une valeur. Cette valeur nous indique si o1 est supérieur, inférieur ou égal à o2.
 
-Il prend les kiloCalories de deux aliments et renvoie une valeur en fonction de si le 1 est le plus grand ou le plus petit ou égaux.
-
-\section{Exception}
 \end{document}

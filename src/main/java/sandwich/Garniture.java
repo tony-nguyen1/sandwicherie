@@ -10,7 +10,7 @@ import main.java.inter.IGarniture;
 public class Garniture extends Aliment implements IGarniture {
 	
 	
-	public Garniture(String s, float f) throws OutOfRangeKilocariesException {
+	protected Garniture(String s, float f) throws OutOfRangeKilocariesException {
 		super(s,f);
 	}
 
@@ -22,21 +22,8 @@ public class Garniture extends Aliment implements IGarniture {
     	this(n.toString(), f);
     }
     
-    /**
-     * @param n
-     * @param f
-     */
-    public Garniture(NomGarnitureVegan n, float f) throws OutOfRangeKilocariesException {
-    	this(n.toString(), f);
-    }
     
-    /**
-     * @param n
-     * @param f
-     */
-    protected Garniture(NomGarnitureVegetarienne n, float f) throws OutOfRangeKilocariesException {
-    	this(n.toString(), f);
-    }
+    
 
 	
 }
