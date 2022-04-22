@@ -63,7 +63,7 @@ public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture> imp
      * @param source
      * @param i indice entier de la garniture dans source.garniture à déplacer
      */
-    public void deplacerIngredientDepuis(Sandwich<? extends P, ? extends S, ? extends G> source, int i) {
+    public void deplacerIngredientDepuis(Sandwich<?, ?, ? extends G> source, int i) {
     	G uneGarniture = source.garniture.get(i);
     	source.garniture.removeLastOccurrence(uneGarniture);
     	this.ajouterIngredient(uneGarniture);
@@ -78,7 +78,7 @@ public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture> imp
      * @param puits
      * @param i indice entier de la garniture dans this.garniture à déplacer
      */
-    public void deplacerIngredientVers(Sandwich<? super P, ? super S, ? super G> puits, int i) {
+    public void deplacerIngredientVers(Sandwich<?, ?, ? super G> puits, int i) {
     	G uneGarniture = this.getNthGarniture(i);
     	this.garniture.removeLastOccurrence(uneGarniture);
     	puits.ajouterIngredient(uneGarniture);
