@@ -1,5 +1,0 @@
--ajouter dans uml, Comparator
--dans uml, code colour pour estVegetarien et estVegan
--AlimentComparator, arrondir au dernier moment
--?changé type dans SandwichIterator
--changé type dans déplacer
