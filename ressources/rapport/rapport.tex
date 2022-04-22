@@ -56,7 +56,7 @@ Lors de la création du Sandwich, les attributs monPain et maSauce sont initiali
 Le pain et la sauce doivent être de type P et S respectivement ou les étendre.
 
 \subparagraph{Remplissage d'un sandwich}
-Après la création d'un sandwich, l'utilisateur manipulant nos classes doit faire attention à remplir correctement les sandwichs. Un sandwich doit être composé de Garniture présente seulement chez cette instance là et pas dans un autre sandwich. Une instance d'une Garniture représente cet aliment avec une quantité égale à 1. Ainsi, si nous voulons 2 tomates dans notre sandwich, il faut 2 instances de la ganiture tomate.
+Après la création d'un sandwich, l'utilisateur manipulant nos classes doit faire attention à remplir correctement les sandwichs. Un sandwich doit être composé de Garniture présente seulement chez cette instance là et pas dans un autre sandwich. Une instance d'une Garniture représente cet aliment avec une quantité égale à 1. Ainsi, si nous voulons 2 tomates dans notre sandwich, il faut 2 instances de la garniture tomate.
 
 Les garnitures ajoutées doivent être de type G ou l'étendre.
 \clearpage
@@ -122,7 +122,7 @@ Si veut qu'un pain/une sauce/une garniture soit vegan il faut \emph{implémenter
 
 \paragraph{} Puisque la classe Aliment possède un attribut "nom" qui est une chaine de caractères, rien n'empêcherait à l'utilisateur d'écrire \emph{GarnitureVegan("poulet", 100)}.
 
-Pour empêcher cela et "sécuriser" la saisie des aliments, toutes les sous-Classes d'Aliment sont associées à une énumération précise.
+Pour empêcher cela et "sécuriser" la saisie des aliments, toutes les sous-classes d'Aliment sont associées à une énumération précise.
 
 Ainsi, pour initialiser une garniture Vegan, il faut préciser en paramètre l'énumération qui correspond à la GarnitureVegan.
 
@@ -140,12 +140,12 @@ Pour contourner ce problème, nous avons décidé d'utiliser 2 constructeurs pou
 - Un constructeur protected, destiné aux appels à super() des classes filles.
 
 \paragraph{}
-Le constructeur publique transforme l'objet de l'énumération en objet String et appel super(String nomAliment, float kcal), ce qui est autorisé puisque les constructeurs prenant
+Le constructeur publique transforme l'objet de l'énumération en objet String et appelle super(String nomAliment, float kcal), ce qui est autorisé puisque les constructeurs prenant
 en paramètre les chaines de caractères sont protected.
 De cette manière le nom de l'aliment remontera jusqu'à la classe Aliment en évitant les incohérences.
 
 \subparagraph{Exception}
-Tous les constructeurs peuvent renvoyer une \emph{OutOfRangeKilocariesException}. Cela vient de l'appel à \emph{setKilocalories} dans la classe Aliment, qui vérifie si le nombre de kilocalories entré est
+Tous les constructeurs peuvent renvoyer une \emph{OutOfRangeKilocariesException} exception. Cela vient de l'appel à \emph{setKilocalories} dans la classe Aliment, qui vérifie si le nombre de kilocalories entré est
 compris entre 0 et 1000 et lance une erreur le cas échéant.
 
 \clearpage
