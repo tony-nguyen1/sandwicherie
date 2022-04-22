@@ -47,7 +47,7 @@ Université de Montpellier.}
     public class Sandwich <P extends Pain, S extends Sauce, G extends Garniture>
 \end{lstlisting}
 \paragraph{}
-Sandwich est une classe nécessairement paraméter par le type de pain utilisé, le type de sauce et le type des autres ingrédients à l'intérieur du sandwich.
+Sandwich est une classe nécessairement paramétrer par le type de pain utilisé, le type de sauce et le type des autres ingrédients à l'intérieur du sandwich.
 
 \paragraph{Création d'un sandwich en 2 temps}
 \subparagraph{Instantiation d'un sandwich}
@@ -125,15 +125,44 @@ Expliquer des choses ici.
 \section{Les autres sandwichs}
 
 \subsection{Sandwich végétarien}
+\begin{lstlisting}[language=Java, caption=Entête de la classe SandwichVege]
+    public class SandwichVege<P extends PainVege,S extends SauceVege,
+     G extends GarnitureVege> extends Sandwich<P,S,G>
+\end{lstlisting}
+\paragraph{}
+La classe représantant les sandwich végétarien (SandwichVege) hérite du sandwich de base (Sandwich) et est elle-même paramétrer par des classes implémentant forcement l'interface estVegetarien.
+\subparagraph{}
+PainVege, SauceVege et GarnitureVege implémentent estVegetarien et hérite de Pain, Sauce et Garniture respectivement.
 
 \subsection{Sandwich végan}
+\begin{lstlisting}[language=Java, caption=Entête de la classe SandwichVegan]
+    public class SandwichVegan<P extends PainVegan, S extends SauceVegan,
+     G extends GarnitureVegan> extends SandwichVege<P, S, G>
+\end{lstlisting}
+\paragraph{}
+La classe représantant les sandwich vegan (SandwichVegan) hérite du sandwich végétarien (SandwichVege) et est elle-même paramétrer par des classes implémentant forcement l'interface estVegan.
+\subparagraph{}
+PainVegan, SauceVegan et GarnitureVegan implémentent estVegan et hérite de PainVege, SauceVege et GarnitureVege respectivement.
 
+L'interface estVegan hérite de estVegetarien.
 \section{public static void main}
 
 \section{Iterator et Stream}
+\subsection{L'itérateur}
+\paragraph{SandwichIterator implements Iterator<Aliment>}
+Nos sandwichs peuvent avoir une quantité de garniture \emph{sans restriction}.
 
+\subparagraph{}
+Avec un attribut privé dans l'itérateur, la fonction next() retourne le pain en premier, puis la sauce.
+Ensuite, nous allons réutiliser l'Iterator de notre collection données contenant notre garniture. Pas besoin de reécrire l'Iterator pour une LinkedList.
 
-\begin{lstlisting}[language=Java, caption=Java example]
-    System.out.println("Hello, World!");
-\end{lstlisting}
+\subsection{Le flot}
+\paragraph{}
+Le stream nous envoie les aliments du sandwich. La fonction max() les compare pour nous et garde le plus grand d'après le Comparator donner en argument. 
+\paragraph{Comparator}
+C'est un petit robot qui compare pour nous.
+
+Il prend les kiloCalories de deux aliments et renvoie une valeur en fonction de si le 1 est le plus grand ou le plus petit ou égaux.
+
+\section{Exception}
 \end{document}
